@@ -1,1 +1,8 @@
-{}
+{
+    "tasks": [
+        "multiplos",
+        "contrasena",
+        "lokomones",
+        "pajaros"
+    ]
+}
