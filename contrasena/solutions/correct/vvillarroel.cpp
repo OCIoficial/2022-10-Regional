@@ -11,7 +11,6 @@ using namespace std;
 int main() {
     int m, n;
     cin >> m >> n;
-    // dec[a] almacena el valor desdecriptado de dec[a]
     vector<char> dec(CARACTERES);
     for (int i = 0; i < dec.size(); ++i){
         dec[i] = i;
