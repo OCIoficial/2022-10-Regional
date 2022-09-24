@@ -1,1 +1,7 @@
-<sample input data here>
+2 4
+ataque 15
+defensa 2
+diego fuego 10 10 10 10
+diego planta 11 11 11 11
+diego agua 12 12 12 12
+diego electrico 13 13 13 13
