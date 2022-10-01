@@ -6,31 +6,50 @@
 
 \begin{document}
 \begin{problemDescription}
-	Daniela es una gran fanática de los múltiplos. Tan así, que dedicó infinito tiempo a escribir en un papel infinito
-	una tabla infinita con infinitos números, de forma que en la fila $i$ están todos los múltiplos de $i$ en orden.
-	Por ejemplo, en la tercera fila estarían los números $3, 6, 9, 12, \dots$
+Daniela es una gran fanática de los números.
+Tanto es su fanatismo, que frecuentemente dedica infinito tiempo en
+escribir listas con infinitos números en un papel infinito.
+Con el paso del tiempo, Daniela ha coleccionado una lista (finita) de números que no
+le gustan.
+Tanta es su aversión por estos números que siempre evita escribirlos en sus
+listas infinitas.
 
-	Pero Daniela también tiene una lista de números que no le gustan, así que al escribir los múltiplos en la tabla,
-	se los saltó. Por ejemplo, si no le gusta el 6, la tercera fila tendría primero el 3 y después el 9.
+Recientemente, Daniela ha aprendido sobre los múltiplos de un número.
+Para aprender más sobre los múltiplos, Daniela acostumbra escoger un número de partida y
+escribe en orden todos los múltiplos de este.
+Como podrías esperar, al escribir los múltiplos, Daniela se salta los números que no le gustan.
+Por ejemplo, suponiendo que a Daniela no le gusta el 6 y el 12, al escribir los múltiplos
+del 3 se los saltará produciendo la lista $3, 9, 15, 18, \cdots$.
 
-	Dada la lista de números que a Daniela no le gustan y una posición en la tabla, tu tarea es encontrar el
-	número que está en esa posición.
-
-
+Dado un número de partida $a$ y un entero $j$, a Daniela le gustaría determinar
+qué número se encuentra en la posición $j$-ésima de la lista que escribe para $a$.
+?`Podrías ayudarla?
 \end{problemDescription}
 
 \begin{inputDescription}
-	La primera línea contiene un número $n$, indicando la cantidad de números que a Daniela no le gustan.
-	
-	La segunda línea contiene $n$ números naturales separados por espacios, indicando los números que a Daniela no le gustan.
+La primera línea contiene un número $n$, indicando la cantidad de números que no le gustan
+a Daniela.
 
-	La última línea contiene dos números naturales $i$ y $j$ ($1 \leq i, j \leq 10^4$), indicando que debes encontrar el $j$-ésimo número
-	de la $i$-ésima fila. Nota que $i$ y $j$ están indexados desde uno.
+La segunda línea contiene $n$ enteros positivos separados por espacios,
+indicando los números que no le gustan a Daniela.
+Se garantiza que todos los números en esta lista serán distintos.
+
+La última línea contiene dos enteros positivos $a$ y $j$ ($1 \leq a, j \leq 10^4$),
+indicando que debes encontrar el $j$-ésimo número en la lista que Daniela
+escribe para $a$.
 \end{inputDescription}
 
 \begin{outputDescription}
-	Imprime un número entero: el que está en la $i$-ésima fila y $j$-ésima columna.
+La salida debe contener un entero correspondiente al $j$-ésimo entero en la lista
+para $a$.
 \end{outputDescription}
+
+\begin{scoreDescription}
+Este problema no contiene subtareas.
+Se probarán varios casos de prueba y se entregará puntaje proporcional al número
+de casos de prueba correctos siendo 100 el puntaje máximo.
+\end{scoreDescription}
+
 
 \begin{sampleDescription}
 \sampleIO{sample-1}
