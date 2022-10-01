@@ -1,28 +1,87 @@
 \documentclass{oci}
 \usepackage[utf8]{inputenc}
+\usepackage{booktabs}
 
-\title{El lokomón de Olivier}
+\title{El lokómon de Olivier}
 
 \begin{document}
 \begin{problemDescription}
-La Liga Lokomón es la mayor instancia a la que un entrenador Lokomón puede aspirar. Lamentablemente, a lo largo de los años, debido a la gran cantidad de entrenadores que han aparecido en el medio, para disputar la Liga debes tener un buen rendimiento en la OCI (lOkomónes Campeonato Internacional) y clasificar. Marinier es un empedernido entrenador de Lokomones, pero debido a una mala racha ha perdido el cupo para clasificar a la Liga. Pero no todo está perdido, ya que su mayor rival, Olivier, ha inscrito un Lokomón que no era suyo, y a pesar de que Olivier le ha ganado de manera justa, y la inscripción de ese Lokomón no ha significado una gran diferencia, a Marinier no le da vergüenza acusarlo, ya que prefiere clasificar por secretaría que no clasificar. 
- 
-	A pesar de que Marinier sabe que Olivier ha inscrito mal uno de sus Lokomones, aún no sabe cuál de todos es, pero gracias a un amigo soplón de Olivier conoce algunas cualidades que el Lokomón mal inscrito \textbf{no} posee, y te pide ayuda para encontrarlo. 
- 
-Un Lokomón tiene 6 atributos asociados, un nombre de largo $k$ $(1 \leq k \leq 20)$ sin espacios, un tipo de largo $j$ $(1 \leq j \leq 20)$ sin espacios, un ataque $a$ $(1 \leq a \leq 10^{6})$, una defensa $d$ $(1 \leq d \leq 10^{6})$, una evasión $e$ $(1 \leq e \leq 10^{6})$ y una vida $v$ $(1 \leq v \leq 10^{6})$. Marinier te da una lista de atributos que sabes que el Lokomón mal inscrito no tiene (por ejemplo, que su nombre no es Castillo, o que su ataque no es 100), y te pide encontrar el nombre del Lokomón que está mal inscrito. Ayúdalo haciendo un programa que lo ayude a encontrarlo, o que le diga que no puede hacerlo en caso de que falte información. 
+La Liga Lokómon es la mayor instancia a la que un entrenador Lokómon puede aspirar.
+Para participar en la liga un entrenador debe clasificar después de tener un buen
+rendimiento en la pretemporada.
+Debido a la gran cantidad de nuevos y talentosos entrenadores, clasificar a la liga
+se ha convertido en una tarea casi imposible.
+Marinier es un obstinado entrenador Lokómon que lleva años tratando de clasificar a la liga.
+Su participación en la pretemporada fue casi impecable, pero luego de una mala racha
+en su última batalla, quedó abajo por solo unos puntos y no logró clasificar a la liga.
+Ya cansado de quedar fuera de la liga, este año Marinier ha decidido intensificar sus
+acciones y dejar de jugar limpio para así poder clasificar.
 
+Luego de indagar, Marinier se enteró de que su mayor rival, Olivier, cometió
+un error al inscribir uno de sus Lokómones.
+A pesar de ser un simple error y haber ganado sus batallas clasificatorias de
+forma justa, inscribir mar un Lokómon puede ser motivo de descalificación y
+Marinier no perderá la oportunidad de denunciarlo para así dejar un cupo abierto
+que el mismo podrá llenar.
+Lamentablemente, Marinier no sabe exactamente cuál de los Lokómones fue el que
+estuvo mal inscrito.
+
+Para inscribir sus Lokómones, los participantes envían una \emph{lista de inscripción}
+detallando para cada Lokómon los valores de cada uno de sus 6 \emph{atributos} asociados.
+El valor de un atributo puede corresponder a una cadena de texto o a un entero.
+Los atributos de tipo texto serán siempre no vacíos, tendrán un largo menor o
+igual que 20 y estarán compuestos por letras minúsculas del alfabeto inglés.
+Los atributos de tipo entero serán siempre mayores que cero y menores o iguales
+que $10^6$.
+La siguiente tabla detalla cada uno de los 6 atributos, junto con un carácter identificador
+del atributo y si corresponden a una cadena de texto o a un entero.
+\begin{center}
+\begin{tabular}{lcc}
+	\toprule
+	\textbf{nombre } & \texttt{n} & texto \\
+	\textbf{tipo   } & \texttt{t} & texto \\
+	\textbf{ataque } & \texttt{a} & entero \\
+	\textbf{defensa} & \texttt{d} & entero \\
+	\textbf{evasión} & \texttt{e} & entero \\
+	\textbf{vida   } & \texttt{v} & entero\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+Marinier sabe que \emph{solo una} de las entradas en la lista de inscripción
+contiene errores, pero no sabe exactamente cuál.
+Pero si ha logrado recolectar un conjunto de atributos que sabe que el Lokómon mal inscrito
+\emph{no tiene}.
+Por ejemplo, Marinier sabe que el nombre del Lokómon mal inscrito \emph{no} es \texttt{Castillo}
+o que su a taque \emph{no} es \texttt{100}.
+Dada la lista de inscripción y el conjunto de atributos que el Lokómon
+mal inscrito no tiene, tu tarea es ayudar a Marinier escribiendo un programa que determine
+cuál entrada en la lista contiene errores o imprimir que es imposible determinarlo de forma
+exacta.
 \end{problemDescription}
 
 \begin{inputDescription}
-	La primera línea de la entrada consiste de dos enteros $n$ y $m$ ($1 \leq n \leq 10^5$, $1 \leq m \leq 100$), el largo de la lista que te entrega Marinier y el largo de la lista de lokomones de Olivier.
+La primera línea de la entrada consiste de dos enteros $X$ y $Y$
+($1 \leq X \leq 10^5$, $1 \leq Y \leq 100$).
+El entero $X$ corresponde al largo de la lista que recopiló Marinier con los atributos
+que el Lokómon mal inscrito no tiene.
+El entero $Y$ corresponde al largo de la lista de inscripción.
 
-Las siguientes $n$ líneas contienen un atributo de los lokomones y un valor asociado, el cual sabemos que es distinto al valor del lokomón mal inscrito.
+Las siguientes $X$ líneas contienen la descripción de los atributos que el Lokómon mal
+inscrito no tiene.
+Cada línea comienza con un carácter identificador de atributo seguido del valor para el atributo,
+el que puede ser un entero o una cadena de texto dependiendo del atributo.
 
-Las siguientes $m$ líneas contienen el nombre, el tipo, el ataque, la defensa, la evasión y la vida (en ese orden) de cada Lokomón de Olivier.
+Las siguientes $Y$ líneas describen las entradas en la lista de inscripción.
+Cada línea contiene los valores para el nombre, el tipo, el ataque, la defensa,
+la evasión y la vida (en ese orden) del Lokómon correspondiente.
+Se garantiza que todos los Lokómones en la lista tienen un nombre distinto.
 \end{inputDescription}
 
 \begin{outputDescription}
-El nombre del Lokomón (si quedan varios lokomones distintos pero con el mismo nombre, si se puede determinar el nombre), en caso de que haya mas de un nombre entre los candidatos, imprimir “NO SE PUEDE SABER”, puedes asumir que como mínimo un lokomon de Olivier cumple con los requisitos para ser el posible lokomón mal inscrito.
+La salida debe contener una línea contendiendo el nombre del Lokómon en la entrada
+que contiene errores o imprimir \texttt{IMPOSIBLE} si falta información para determinarlo
+de forma exacta.
 \end{outputDescription}
 
 \begin{sampleDescription}
