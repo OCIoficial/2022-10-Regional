@@ -6,30 +6,69 @@
 
 \begin{document}
 \begin{problemDescription}
-  Diego es un importante miembro de la unión chilena de hackers (UCH), lo que lo pone en un riesgo constante a ser atacado por otros hackers, por lo que siempre encripta sus contraseñas para asegurarse de que estas se mantengan seguras de cualquier posible amenaza.
+  Diego es uno de los líderes de la Unión Chilena de Hackers (UCH), lo cual lo pone
+  en constante riesgo de ser atacado por otros hackers de organizaciones rivales.
+  Es por esto que Diego siempre encripta sus contraseñas para así poder almacenarlas de
+  forma segura y protegerse ante cualquier amenaza.
 
-  Para esto, Diego almacena todas sus N contraseñas en un archivo de su computador, asegurándose de encriptarlas primero.
+  Diego debe almacenar un total de $N$ contraseñas.
+  Cada contraseña corresponde a una cadena de caracteres en el alfabeto inglés
+  (sin la \texttt{ñ}).
+  Las contraseñas distinguen entre mayúsculas y minúsculas.
+  Para almacenarlas, Diego encriptó cada una de las contraseñas usando el mismo
+  esquema de encriptación y las guardó en un archivo.
 
-  Las contraseñas son encriptadas intercambiando algunos de sus carácteres por otros. Los carácteres a intercambiar son determinados por otro archivo, el cual contiene M reglas de intercambio.
+  El esquema de encriptación se basa en intercambiar caracteres de la contraseña
+  aplicando una lista de reglas.
+  Cada regla consiste en dos caracteres $c_1$ y $c_2$ indicando los caracteres
+  que se deben intercambiar.
+  De forma concreta, para aplicar una regla, se deben reemplazar todas las ocurrencias
+  del carácter $c_1$ por $c_2$ y todas las ocurrencias de $c_2$ por $c_1$.
+  Para encriptar una contraseña todas las reglas en la lista se aplican de forma consecutiva
+  de arriba hacia abajo.
 
-  Sin embargo, Diego necesita poder utilizar sus contraseñas, por lo que tendrá que desencriptarlas. Para esto, necesita crear un programa que reciba las M instrucciones y las N contraseñas, y deberá retornar las N contraseñas desencriptadas. ¿Podrás ayudarlo?
+  Por ejemplo, supón que queremos encriptar la contraseña \texttt{abanico} usando la siguiente
+  lista de reglas:
+\begin{center}
+\texttt{a b} \\
+\texttt{b c}
+\end{center}
+  Comenzamos aplicando la primera regla, es decir, reemplazando todas las ocurrencias de
+  \texttt{a} por \texttt{b} y viceversa.
+  Después de aplicar la regla obtenemos la cadena \texttt{babnico}.
+  Posteriormente, aplicamos la segunda regla y obtenemos \texttt{cacnibo} que es la contraseña
+  encriptada final.
+
+  Diego está muy ocupado con sus labores de líder de la UCH y necesita ayuda para escribir un
+  programa que le permita desencriptar rápidamente las contraseñas en el archivo.
+  De forma concreta, dada la lista de reglas y las $N$ contraseñas encriptadas, el programa
+  debe imprimir la lista de contraseñas desencriptadas.
+  ¿Podrías ayudarlo?
 \end{problemDescription}
 
 \begin{inputDescription}
-  La primera línea de la entrada contiene dos enteros M y N ($0 < M \leq 10000$ y $0 < N \leq 1000$) correspondiente a la cantidad de reglas, y a la cantidad de contraseñas encriptadas respectivamente.
+  La primera línea de la entrada contiene dos enteros $M$ y $N$
+  ($0 < M \leq 10000$ y $0 < N \leq 1000$) correspondientes respectivamente a la cantidad
+  de reglas y a la cantidad de contraseñas encriptadas.
 
-  A continuación, vienen M líneas, cada una conteniendo 2 carácteres separados por un espacio. Estos corresponden a los 2 carácteres a intercambiar.
+  A continuación vienen $M$ líneas describiendo la lista de reglas.
+  Cada línea contiene 2 caracteres separados por un espacio describiendo una regla.
 
-  Finalmente, siguen N líneas más, cada una conteniendo una contraseña encriptada consistente sólo de carácteres alfanuméricos, de largo menor o igual a 100.
+  Finalmente, siguen $N$ líneas, cada una conteniendo una cadena de texto de largo mayor que cero
+  y menor o igual a 100, correspondiente a una contraseña encriptada.
+
+  Se garantiza que todos los caracteres en la entrada (en las contraseñas encriptadas y la lista
+  de reglas) serán caracteres del alfabeto inglés en mayúsculas o minúsculas.
 \end{inputDescription}
 
 \begin{outputDescription}
-  La salida debe contener N lineas, con cada linea correspondiendo a la contraseña desencriptada correspondiente.
+  La salida debe contener $N$ líneas, correspondientes a las contraseñas
+  originales desencriptadas en el mismo orden en que aparecieron en la entrada.
 \end{outputDescription}
 
 \begin{scoreDescription}
   \subtask{??}
-  Se probarán varios casos en que M=1
+  Se probarán varios casos en que $M=1$, es decir, hay solo una regla.
   \subtask{??}
   Se probarán varios casos en que un mismo carácter no aparece en más de una regla.
   \subtask{??}
@@ -39,7 +78,7 @@
 \begin{sampleDescription}
 \sampleIO{sample-1}
 \sampleIO{sample-2}
-\sampleIO{sample-3}
+% \sampleIO{sample-3}
 \end{sampleDescription}
 
 \end{document}
