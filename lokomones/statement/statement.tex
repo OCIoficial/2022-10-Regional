@@ -49,15 +49,15 @@ del atributo y si corresponden a una cadena de texto o a un entero.
 \end{center}
 
 Marinier sabe que \emph{solo una} de las entradas en la lista de inscripción
-contiene errores, pero no sabe exactamente cuál.
-Pero si ha logrado recolectar un conjunto de atributos que sabe que el Lokómon mal inscrito
-\emph{no tiene}.
+contiene errores.
+Adicionalmente, ha logrado recolectar un conjunto de atributos que sabe que el Lokómon
+mal inscrito \emph{no tiene}.
 Por ejemplo, Marinier sabe que el nombre del Lokómon mal inscrito \emph{no} es \texttt{Castillo}
 o que su a taque \emph{no} es \texttt{100}.
 Dada la lista de inscripción y el conjunto de atributos que el Lokómon
 mal inscrito no tiene, tu tarea es ayudar a Marinier escribiendo un programa que determine
-cuál entrada en la lista contiene errores o imprimir que es imposible determinarlo de forma
-exacta.
+cuál entrada en la lista de inscripción contiene errores o imprimir que es imposible
+determinarlo de forma exacta.
 \end{problemDescription}
 
 \begin{inputDescription}
@@ -79,9 +79,9 @@ Se garantiza que todos los Lokómones en la lista tienen un nombre distinto.
 \end{inputDescription}
 
 \begin{outputDescription}
-La salida debe contener una línea contendiendo el nombre del Lokómon en la entrada
-que contiene errores o imprimir \texttt{IMPOSIBLE} si falta información para determinarlo
-de forma exacta.
+La salida debe contener el nombre del Lokómon en la entrada que contiene errores.
+En caso de faltar información para determinar de forma exacta la entrada que contiene errores
+tu programa debe imprimir \texttt{IMPOSIBLE}.
 \end{outputDescription}
 
 \begin{sampleDescription}
