@@ -2,35 +2,50 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
-\title{Pájaros enojados}
+\title{Pájaros furiosos}
 
 \begin{document}
 \begin{problemDescription}
-Los pájaros enojados quieren eliminar a todos los cerditos. Los cerdos están posicionados en canastas, donde una
-canasta puede tener 1 o 2 cerditos, y cada pájaro puede elegir una sola canasta para atacarla.
+Los pájaros furiosos deben salvar sus huevos de la amenaza de los
+cerditos y están planeando una embestida
+para eliminarlos a todos de forma definitiva.
 
-Los pájaros pueden ser rojos, lo que significa que pueden eliminar un solo cerdo, o pueden ser amarillos, lo que significa
-que pueden eliminar dos cerdos siempre y cuando estén en la misma canasta. De esta forma, un pájaro rojo puede atacar
-una canasta pero solo eliminará uno de los cerdos y requerirá que se ataque con otro pájaro rojo o uno amarillo para eliminarla
-completamente. Un pájaro amarillo también puede atacar una canasta con un solo cerdo, pero perdería su potencial ya que
-podría eliminar una canasta con dos cerdos.
+Los cerditos están distribuidos en distintas canastas, donde cada
+canasta puede contener 1 o 2 cerditos.
+Durante la embestida, cada pájaro puede elegir \emph{una sola} canasta para
+atacar y eliminar a los cerditos en ella.
+Los pájaros pueden ser rojos o amarillos los cuales tienen
+diferente poder de ataque.
+Al atacar una canasta, un pájaro rojo puede eliminar a lo más un
+cerdito de esta.
+Si una canasta contiene dos cerditos y es atacada por un pájaro rojo,
+solo se eliminará un cerdito de esta y el otro deberá ser eliminado por
+el ataque de otro pájaro.
+Los pájaros amarillos pueden eliminar hasta dos cerditos.
+Un pájaro amarillo puede atacar una canasta con solo un cerdito
+(eliminándolo de la canasta) pero se perderá parte de su poder
+de ataque.
 
-Escribe un programa que diga si es posible que los pájaros, de alguna forma, eliminen a todos los cerditos o no.
+Tu tarea es ayudar a los pájaros furiosos escribiendo un programa
+que determine si es posible elegir el ataque de cada pájaro de forma
+que se eliminen todos los cerditos.
 \end{problemDescription}
 
 \begin{inputDescription}
-	La primera línea consiste en dos números enteros $n$ y $m$ ($1 \leq n, m \leq 5 \cdot 10^5$), indicando la cantidad de pájaros y cerditos,
-	respectivamente.
+	La primera línea consiste en dos números enteros $n$ y $m$ ($1 \leq n, m \leq 5 \cdot 10^5$),
+	indicando respectivamente la cantidad de pájaros y cerditos.
 
-	La segunda línea representa los pájaros. Ésta contiene $n$ números enteros separados por espacios, que pueden ser
-	1 o 2. Un 1 indica un pájaro rojo, mientras que un 2 indica uno amarillo.
+	La segunda línea contiene $n$ enteros separados por espacios describiendo
+	el color de cada pájaro.
+	Un 1 indica un pájaro rojo mientras que un 2 indica uno amarillo.
 
-	La última línea describe las canastas. Ésta contiene $m$ números separados por espacios que también pueden ser 1 o 2,
-	indicando la cantidad de cerditos en cada canasta.
+	La última línea describe las canastas y contiene $m$ enteros separados por espacios.
+	Los enteros pueden ser 1 o 2, indicando la cantidad de cerditos en cada canasta.
 \end{inputDescription}
 
 \begin{outputDescription}
-	Imprime \texttt{SI} si es posible que los pájaros eliminen a todos los cerditos, y \texttt{NO} si no.
+	La salida debe contener \texttt{SI} en caso de ser posible que los pájaros
+	eliminen a todos los cerditos, y \texttt{NO} en caso contrario.
 \end{outputDescription}
 
 \begin{sampleDescription}

@@ -16,6 +16,7 @@
 \RequirePackage{color}
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
+\RequirePackage[spanish]{babel}
 
 %% Catch environment variable
 \RequirePackage{catchfile}
@@ -48,7 +49,7 @@
 %% HEADER
 \getenv[\phase]{OCIMATIC_PHASE}
 
-\setlength\headheight{54.3pt} 
+\setlength\headheight{54.3pt}
 \pagestyle{fancy}
 \lhead{\includegraphics[height=34pt]{logo.eps}}
 \rhead{\phase\ \the\year}
