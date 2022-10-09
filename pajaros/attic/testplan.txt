@@ -27,21 +27,52 @@
 # The generator should use this extra argument to generate the random seed. The extra argument is
 # passed as the first argument meaning that the rest of the arguments are "shifted" in one position.
 
-[Subtask 1]
-  # Use sample data as test
+[Subtask 1 - validators/st1.cpp]
+  # Statement cases
   sample ; copy statement/sample-1.in
   sample ; copy statement/sample-2.in
 
-  # Manual test case
-  manual ; copy attic/manual-1.in
+  # Manual cases
+  manual ; copy attic/manual_cases/3red_2singles.in
+  manual ; copy attic/manual_cases/3red_3singles.in
+  manual ; copy attic/manual_cases/3red_4singles.in
+  manual ; copy attic/manual_cases/5red_2doubles.in
+  manual ; copy attic/manual_cases/5red_3doubles.in
+  manual ; copy attic/manual_cases/5red_1single_2doubles_perm1.in
+  manual ; copy attic/manual_cases/5red_1single_2doubles_perm2.in
+  manual ; copy attic/manual_cases/5red_1single_2doubles_perm3.in
+  manual ; copy attic/manual_cases/1yellow_1single.in
+  manual ; copy attic/manual_cases/1yellow_1double.in
+  manual ; copy attic/manual_cases/3yellow_3singles.in
+  manual ; copy attic/manual_cases/3yellow_4singles.in
+  manual ; copy attic/manual_cases/3yellow_3doubles.in
+  manual ; copy attic/manual_cases/1red_3yellow_1single_3doubles.in
+  manual ; copy attic/manual_cases/2red_2yellow_1single_3doubles.in
 
-  # Random tests
-  rand ; random.cpp 10 100
-  rand ; random.cpp 100 1000
-
-
-[Subtask 2]
-  # Random tests
-  rand ; random.py 10 20 30
-  rand ; random.py 20 30 40
-
+  # 5 small random cases
+  rand ; gen_random.py 10 10
+  rand ; gen_random.py 10 10
+  rand ; gen_random.py 10 10
+  rand ; gen_random.py 10 10
+  rand ; gen_random.py 10 10
+  # 10 medium random cases
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  rand ; gen_random.py 1000 1000
+  # 5 completely random cases
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  # 3 big random cases
+  rand ; gen_random.py 500000 500000
+  rand ; gen_random.py 500000 500000
+  rand ; gen_random.py 500000 500000
