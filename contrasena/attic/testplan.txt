@@ -27,21 +27,37 @@
 # The generator should use this extra argument to generate the random seed. The extra argument is
 # passed as the first argument meaning that the rest of the arguments are "shifted" in one position.
 
-[Subtask 1]
-  # Use sample data as test
+[Subtask 1 - validators/st1.cpp]
   sample ; copy statement/sample-1.in
+
+  manual-st1 ; copy attic/manual_cases/st1.in
+
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+
+
+[Subtask 2 - validators/st2.cpp]
+  manual-st2 ; copy attic/manual_cases/st2.in
+
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+
+[Subtask 3 - validators/st3.cpp]
   sample ; copy statement/sample-2.in
 
-  # Manual test case
-  manual ; copy attic/manual-1.in
+  manual-st3 ; copy attic/manual_cases/st3.in
+  manual-st3 ; copy attic/manual_cases/minus_st3.in
+  manual-st3 ; copy attic/manual_cases/mayus_st3.in
 
-  # Random tests
-  rand ; random.cpp 10 100
-  rand ; random.cpp 100 1000
-
-
-[Subtask 2]
-  # Random tests
-  rand ; random.py 10 20 30
-  rand ; random.py 20 30 40
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
 
