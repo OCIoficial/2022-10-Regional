@@ -27,21 +27,26 @@
 # The generator should use this extra argument to generate the random seed. The extra argument is
 # passed as the first argument meaning that the rest of the arguments are "shifted" in one position.
 
-[Subtask 1]
-  # Use sample data as test
+[Subtask 1 - validators/st1.cpp]
+  # Statement samples
   sample ; copy statement/sample-1.in
   sample ; copy statement/sample-2.in
 
-  # Manual test case
-  manual ; copy attic/manual-1.in
+  # Manual test cases
+  manual ; copy attic/manual_cases/1_rule.in
+  manual ; copy attic/manual_cases/no_discard.in
+  manual ; copy attic/manual_cases/all_discarded.in
 
   # Random tests
-  rand ; random.cpp 10 100
-  rand ; random.cpp 100 1000
-
-
-[Subtask 2]
-  # Random tests
-  rand ; random.py 10 20 30
-  rand ; random.py 20 30 40
-
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  rand ; gen_random.py rand rand
+  rand-impossible ; gen_random.py 98 100
+  rand-impossible ; gen_random.py 98 100
+  rand-impossible ; gen_random.py 98 100
+  rand-impossible ; gen_random.py 98 100
+  rand-big ; gen_random.py 100000 100
+  rand-big ; gen_random.py 100000 100
+  rand-big ; gen_random.py 100000 100
+  rand-big ; gen_random.py 100000 100
