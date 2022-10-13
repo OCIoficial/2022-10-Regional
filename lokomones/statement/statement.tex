@@ -30,10 +30,6 @@ estuvo mal inscrito.
 Para inscribir sus Lokómones, los participantes envían una \emph{lista de inscripción}
 detallando para cada Lokómon los valores de cada uno de sus 6 \emph{atributos} asociados.
 El valor de un atributo puede corresponder a una cadena de texto o a un entero.
-Los atributos de tipo texto serán siempre no vacíos, tendrán un largo menor o
-igual que 20 y estarán compuestos por letras minúsculas del alfabeto inglés.
-Los atributos de tipo entero serán siempre mayores que cero y menores o iguales
-que $10^6$.
 La siguiente tabla detalla cada uno de los 6 atributos, junto con un carácter identificador
 del atributo y si corresponden a una cadena de texto o a un entero.
 \begin{center}
@@ -79,6 +75,11 @@ Las siguientes $Y$ líneas describen las entradas en la lista de inscripción.
 Cada línea contiene los valores para el nombre, el tipo, el ataque, la defensa,
 la evasión y la vida (en ese orden) del Lokómon correspondiente.
 Se garantiza que todos los Lokómones en la lista tienen un nombre distinto.
+
+Todos los atributos de tipo texto serán siempre no vacíos, tendrán un largo menor o igual que 20
+y estarán compuestos por letras minúsculas del alfabeto inglés.
+Tos los atributos de tipo entero serán siempre mayores que cero y menores o iguales
+que $10^6$.
 \end{inputDescription}
 
 \begin{outputDescription}
