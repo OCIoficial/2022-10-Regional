@@ -49,9 +49,13 @@ que se eliminen todos los cerditos.
 \end{outputDescription}
 
 \begin{scoreDescription}
-Este problema no contiene subtareas.
-Se probarán varios casos de prueba y se entregará puntaje proporcional al número
-de casos de prueba correctos siendo 100 el puntaje máximo.
+Este problema no contiene subtareas y se otorgará puntaje de acuerdo a la cantidad de
+casos correctos.
+Para obtener puntaje mayor que cero debes tener al menos un 50\% de los casos de
+prueba correctos.
+Específicamente, si $T$ es la cantidad total de casos y $C$ la cantidad de casos correctos,
+el puntaje será 0 si $C < \frac{T}{2}$.
+Si $C \geq \frac{T}{2}$ el puntaje será $\frac{2\cdot C - T}{T}\cdot 100$.
 \end{scoreDescription}
 
 \begin{sampleDescription}
