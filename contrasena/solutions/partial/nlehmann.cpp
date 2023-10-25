@@ -1,3 +1,4 @@
+// @ocimatic should-fail=[st3]
 #include "algorithm"
 #include "iostream"
 #include "vector"
