@@ -18,7 +18,7 @@
 # for tasks where the input consist of a single line to quickly generate test cases manually.
 
 # `script`: A generator script is a file in either python (extension `.py`) or c++ (extension `.cpp`).
-# The file should be placed in `attic/` next to this file. When processing the testplan ocimatic will
+# The file should be placed in `testplan/` next to this file. When processing the testplan ocimatic will
 # run the script with the provided arguments (sys.argv or **argv). The script should then write
 # to the standard output.
 # Generator scripts typically use randomness. To ensure each execution of the testplan generates the
@@ -33,10 +33,10 @@
   sample ; copy statement/sample-2.in
 
   # Manual test cases
-  manual ; copy attic/manual_cases/irrelevant_deletions.in
-  manual ; copy attic/manual_cases/max_a_j.in
-  manual ; copy attic/manual_cases/sorted.in
-  manual ; copy attic/manual_cases/reverse_sorted.in
+  manual ; copy testplan/manual_cases/irrelevant_deletions.in
+  manual ; copy testplan/manual_cases/max_a_j.in
+  manual ; copy testplan/manual_cases/sorted.in
+  manual ; copy testplan/manual_cases/reverse_sorted.in
 
   # Random tests where all numbers are multiples of "a"
   rand-mult ; gen_multiples.py 1 rand rand

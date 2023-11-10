@@ -18,7 +18,7 @@
 # for tasks where the input consist of a single line to quickly generate test cases manually.
 
 # `script`: A generator script is a file in either python (extension `.py`) or c++ (extension `.cpp`).
-# The file should be placed in `attic/` next to this file. When processing the testplan ocimatic will
+# The file should be placed in `testplan/` next to this file. When processing the testplan ocimatic will
 # run the script with the provided arguments (sys.argv or **argv). The script should then write
 # to the standard output.
 # Generator scripts typically use randomness. To ensure each execution of the testplan generates the
@@ -28,40 +28,36 @@
 # passed as the first argument meaning that the rest of the arguments are "shifted" in one position.
 
 [Subtask 1 - validators/st1.cpp]
-  # Statement cases
   sample ; copy statement/sample-1.in
+
+  manual-st1 ; copy testplan/manual_cases/st1.in
+
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+  rand-st1 ; gen_random.py 1 1000
+
+
+[Subtask 2 - validators/st2.cpp]
+  manual-st2 ; copy testplan/manual_cases/st2.in
+
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+  rand-st2 ; gen_random.py 26 1000 st2
+
+[Subtask 3 - validators/st3.cpp]
   sample ; copy statement/sample-2.in
 
-  # Manual cases
-  manual ; copy attic/manual_cases/3red_3singles.in
-  manual ; copy attic/manual_cases/3red_4singles.in
-  manual ; copy attic/manual_cases/5red_2doubles.in
-  manual ; copy attic/manual_cases/5red_3doubles.in
-  manual ; copy attic/manual_cases/5red_1single_2doubles.in
-  manual ; copy attic/manual_cases/1yellow_1single.in
-  manual ; copy attic/manual_cases/1yellow_2single.in
-  manual ; copy attic/manual_cases/1yellow_3single.in
-  manual ; copy attic/manual_cases/1yellow_1double.in
-  manual ; copy attic/manual_cases/3yellow_3singles.in
-  manual ; copy attic/manual_cases/3yellow_4singles.in
-  manual ; copy attic/manual_cases/3yellow_3doubles.in
-  manual ; copy attic/manual_cases/1red_3yellow_1single_3doubles.in
-  manual ; copy attic/manual_cases/2red_2yellow_1single_3doubles.in
-  manual ; copy attic/manual_cases/sum_n_greater_sum_m.in
-  manual ; copy attic/manual_cases/sum_n_equal_sum_m.in
-  manual ; copy attic/manual_cases/sum_n_greater_sum_m_big.in
-  manual ; copy attic/manual_cases/sum_n_equal_sum_m_big.in
+  manual-st3 ; copy testplan/manual_cases/st3.in
+  manual-st3 ; copy testplan/manual_cases/minus_st3.in
+  manual-st3 ; copy testplan/manual_cases/mayus_st3.in
 
-  # 3 small random cases
-  rand ; gen_random.py 10 10
-  rand ; gen_random.py 10 10
-  rand ; gen_random.py 10 10
-  # 3 medium random cases
-  rand ; gen_random.py 1000 1000
-  rand ; gen_random.py 1000 1000
-  rand ; gen_random.py 1000 1000
-  # 4 big random cases
-  rand ; gen_random.py 500000 500000
-  rand ; gen_random.py 500000 500000
-  rand ; gen_random.py 500000 500000
-  rand ; gen_random.py 500000 500000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+  rand-st3 ; gen_random.py 10000 1000
+
